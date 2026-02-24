@@ -11,24 +11,12 @@
     background-position: center;
   }
 
-  // Modifiers for highlighting first N stars
-  &--1 .stars__star:nth-child(-n + 1) {
-    background-image: url('../images/star-active.svg');
-  }
-
-  &--2 .stars__star:nth-child(-n + 2) {
-    background-image: url('../images/star-active.svg');
-  }
-
-  &--3 .stars__star:nth-child(-n + 3) {
-    background-image: url('../images/star-active.svg');
-  }
-
-  &--4 .stars__star:nth-child(-n + 4) {
-    background-image: url('../images/star-active.svg');
-  }
-
-  &--5 .stars__star:nth-child(-n + 5) {
-    background-image: url('../images/star-active.svg');
+  // Modifiers for highlighting first N stars using SCSS loop
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
   }
 }

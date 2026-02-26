@@ -12,12 +12,6 @@ body {
   padding: $spacing-lg;
 }
 
-h1 {
-  text-align: center;
-  color: $color-text;
-  margin-bottom: $spacing-lg;
-}
-
 // Container para os cartões usando flexbox
 .cards-container {
   display: flex;

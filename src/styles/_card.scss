@@ -12,77 +12,80 @@
     height: $card-image-height;
     object-fit: cover;
     border-radius: $border-radius;
+    margin-bottom: $spacing-md;
   }
 
   &__title {
     font-size: $font-size-title;
     font-weight: 600;
     color: $color-text;
-    margin: $spacing-md 0 $spacing-sm;
-  }
-
-  &__description {
-    font-size: $font-size-base;
-    color: $color-text-light;
-    margin-bottom: $spacing-md;
+    margin-bottom: $spacing-xs;
     line-height: 1.4;
   }
 
-  &__price {
+  &__code {
+    font-size: $font-size-base;
+    color: $color-text-light;
+    margin-bottom: $spacing-md;
+  }
+
+  &__reviews {
     display: flex;
     align-items: center;
     gap: $spacing-sm;
     margin-bottom: $spacing-md;
   }
 
-  &__current-price {
+  &__stars {
+    display: flex;
+  }
+
+  &__reviews-count {
+    font-size: $font-size-base;
+    color: $color-text-light;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $spacing-md;
+  }
+
+  &__price-label {
+    font-size: $font-size-base;
+    color: $color-text-light;
+  }
+
+  &__price-value {
     font-size: $font-size-price;
     font-weight: 700;
     color: $color-text;
   }
 
-  &__old-price {
-    font-size: $font-size-old-price;
-    color: $color-text-light;
-    text-decoration: line-through;
-  }
-
-  &__stars {
-    margin-bottom: $spacing-md;
-  }
-
-  &__actions {
-    display: flex;
-    gap: $spacing-sm;
-  }
-
   &__btn {
-    flex: 1;
-    padding: $spacing-sm $spacing-md;
-    border: none;
+    display: block;
+    width: 100%;
+    padding: $spacing-md;
+    border: $card-border-width solid $color-primary;
     border-radius: $border-radius;
     font-size: $font-size-base;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color $transition-speed;
+    transition:
+      background-color $transition-speed,
+      color $transition-speed;
     text-align: center;
     text-decoration: none;
+    box-sizing: border-box;
 
     &--buy {
       background-color: $color-primary;
       color: $color-white;
 
       &:hover {
-        background-color: $color-primary-hover;
-      }
-    }
-
-    &--details {
-      background-color: $color-bg;
-      color: $color-text;
-
-      &:hover {
-        background-color: $color-bg-hover;
+        background-color: $color-white;
+        color: $color-primary;
       }
     }
   }

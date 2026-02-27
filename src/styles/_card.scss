@@ -19,14 +19,17 @@
     font-size: $font-size-title;
     font-weight: 600;
     color: $color-text;
-    margin-bottom: $spacing-xs;
+    margin: 0 0 $spacing-xs;
     line-height: 1.4;
+    text-align: left;
   }
 
-  &__code {
-    font-size: $font-size-base;
+  &__description {
+    font-size: $font-size-description;
     color: $color-text-light;
-    margin-bottom: $spacing-md;
+    margin: 0 0 $spacing-xs;
+    line-height: 1.4;
+    text-align: left;
   }
 
   &__reviews {
@@ -41,32 +44,37 @@
   }
 
   &__reviews-count {
-    font-size: $font-size-base;
+    font-size: $font-size-reviews;
     color: $color-text-light;
   }
 
   &__price {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: $spacing-md;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-sm;
   }
 
-  &__price-label {
-    font-size: $font-size-base;
-    color: $color-text-light;
-  }
-
-  &__price-value {
+  &__price-current {
     font-size: $font-size-price;
     font-weight: 700;
     color: $color-text;
   }
 
+  &__price-old {
+    font-size: $font-size-old-price;
+    color: $color-text-light;
+    text-decoration: line-through;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: $spacing-sm;
+  }
+
   &__btn {
-    display: block;
-    width: 100%;
-    padding: $spacing-md;
+    flex: 1;
+    padding: 10px $spacing-sm;
     border: $card-border-width solid $color-primary;
     border-radius: $border-radius;
     font-size: $font-size-base;
@@ -78,6 +86,9 @@
     text-align: center;
     text-decoration: none;
     box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     &--buy {
       background-color: $color-primary;
@@ -86,6 +97,18 @@
       &:hover {
         background-color: $color-white;
         color: $color-primary;
+      }
+    }
+
+    &--details {
+      background-color: $color-bg-hover;
+      color: $color-text;
+      border-color: $color-border;
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-primary;
+        border-color: $color-primary;
       }
     }
   }

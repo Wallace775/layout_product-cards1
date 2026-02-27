@@ -13,10 +13,8 @@
 
   // Modifiers for highlighting first N stars using SCSS loop
   @for $i from 1 through 5 {
-    &--#{$i} {
-      &__star:nth-child(-n + #{$i}) {
-        background-image: url('../images/star-active.svg');
-      }
+    &--#{$i} .stars__star:nth-child(-n + #{$i}) {
+      background-image: url('../images/star-active.svg');
     }
   }
 }

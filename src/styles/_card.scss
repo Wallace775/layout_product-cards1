@@ -1,51 +1,36 @@
+@use 'sass:color';
+@import 'variables';
+
 .card {
   width: $card-width;
   border: $card-border-width solid $color-border;
   border-radius: $border-radius;
-  padding: $spacing-md;
+  padding: $card-padding;
   font-family: $font-family;
   background-color: $color-white;
   box-sizing: border-box;
 
   &__image {
-    width: 100%;
+    width: $card-image-width;
     height: $card-image-height;
-    object-fit: cover;
-    border-radius: $border-radius;
-    margin-bottom: $spacing-md;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
   }
 
   &__title {
     font-size: $font-size-title;
-    font-weight: 600;
-    color: $color-text;
-    margin: 0 0 $spacing-xs;
-    line-height: 1.4;
-    text-align: left;
+    font-weight: $font-weight-title;
+    color: $color-main-accent;
+    margin: $spacing-sm 0;
+    line-height: $line-height-title;
   }
 
   &__description {
-    font-size: $font-size-description;
-    color: $color-text-light;
-    margin: 0 0 $spacing-xs;
+    font-size: $font-size-base;
+    color: $color-secondary;
+    margin: 0 0 $spacing-sm;
     line-height: 1.4;
-    text-align: left;
-  }
-
-  &__reviews {
-    display: flex;
-    align-items: center;
-    gap: $spacing-sm;
-    margin-bottom: $spacing-md;
-  }
-
-  &__stars {
-    display: flex;
-  }
-
-  &__reviews-count {
-    font-size: $font-size-reviews;
-    color: $color-text-light;
   }
 
   &__price {
@@ -56,15 +41,19 @@
   }
 
   &__price-current {
-    font-size: $font-size-price;
+    font-size: $font-size-price-value;
     font-weight: 700;
-    color: $color-text;
+    color: $color-main-accent;
   }
 
   &__price-old {
-    font-size: $font-size-old-price;
-    color: $color-text-light;
+    font-size: $font-size-base;
+    color: $color-secondary;
     text-decoration: line-through;
+  }
+
+  &__reviews {
+    margin-bottom: $spacing-sm;
   }
 
   &__buttons {
@@ -72,43 +61,44 @@
     gap: $spacing-sm;
   }
 
-  &__btn {
+  &__button {
     flex: 1;
-    padding: 10px $spacing-sm;
-    border: $card-border-width solid $color-primary;
-    border-radius: $border-radius;
+    height: $button-height;
+    border: $card-border-width solid $color-button;
+    border-radius: $button-radius;
+    font-family: $font-family;
     font-size: $font-size-base;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     transition:
       background-color $transition-speed,
       color $transition-speed;
     text-align: center;
     text-decoration: none;
-    box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 
     &--buy {
-      background-color: $color-primary;
+      background-color: $color-button;
       color: $color-white;
 
       &:hover {
         background-color: $color-white;
-        color: $color-primary;
+        color: $color-button;
       }
     }
 
     &--details {
-      background-color: $color-bg-hover;
-      color: $color-text;
+      background-color: $color-bg;
+      color: $color-main-accent;
       border-color: $color-border;
 
       &:hover {
         background-color: $color-white;
-        color: $color-primary;
-        border-color: $color-primary;
+        color: $color-button;
+        border-color: $color-button;
       }
     }
   }

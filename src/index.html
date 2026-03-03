@@ -11,11 +11,23 @@
       rel="stylesheet"
       href="./styles/index.scss"
     />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="cards-container">
-      <!-- Card -->
-      <div
+      <article
         class="card"
         data-qa="card"
       >
@@ -33,32 +45,30 @@
           <span class="card__price-old">$1,499</span>
         </div>
         <div class="card__reviews">
-          <div class="card__stars">
-            <div class="stars">
-              <div class="stars__star"></div>
-              <div class="stars__star"></div>
-              <div class="stars__star"></div>
-              <div class="stars__star"></div>
-              <div class="stars__star"></div>
-            </div>
+          <div class="stars stars--4">
+            <div class="stars__star"></div>
+            <div class="stars__star"></div>
+            <div class="stars__star"></div>
+            <div class="stars__star"></div>
+            <div class="stars__star"></div>
           </div>
         </div>
         <div class="card__buttons">
           <a
             href="#"
-            class="card__btn card__btn--buy"
+            class="card__button card__button--buy"
             data-qa="hover"
           >
             BUY
           </a>
           <a
             href="#"
-            class="card__btn card__btn--details"
+            class="card__button card__button--details"
           >
             Details
           </a>
         </div>
-      </div>
+      </article>
     </div>
   </body>
 </html>

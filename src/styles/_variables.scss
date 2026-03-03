@@ -1,39 +1,51 @@
-// Colors
-$color-primary: #007bff;
-$color-primary-hover: #0056b3;
-$color-text: #333;
-$color-text-light: #999;
-$color-bg: #f5f5f5;
-$color-bg-hover: #f0f0f0;
-$color-border: #e0e0e0;
-$color-white: #fff;
-$color-star-active: #ffc107;
-$color-star-inactive: #e4e5e9;
+// Cores principais (do Figma)
+$color-main-accent: #060b35; // Título
+$color-secondary: #616070; // Código do produto e "Reviews"
+$color-button: #13b4e1; // Fundo do botão BUY
+$color-white: #fff; // Branco
+$color-star-active: #ffc107; // Estrela ativa
+$color-star-inactive: #e4e5e9; // Estrela inativa
+$color-border: #e0e0e0; // Borda
+$color-bg: #f5f5f5; // Fundo da página
 
-// Typography
+// Tipografia
 $font-family: 'Roboto', sans-serif;
-$font-size-base: 14px;
-$font-size-title: 20px;
-$font-size-description: 14px;
-$font-size-price: 24px;
-$font-size-old-price: 14px;
-$font-size-reviews: 12px;
+$font-size-base: 12px;
+$font-size-title: 12px;
+$font-size-code: 10px;
+$font-size-price-label: 12px;
+$font-size-price-value: 14px;
+$font-size-reviews: 10px;
+$font-weight-title: 500;
+$font-weight-code: 400;
+$line-height-title: 18px;
+$line-height-code: 14px;
+$line-height-price: 18px;
 
-// Spacing
+// Espaçamento
 $spacing-xs: 4px;
 $spacing-sm: 8px;
 $spacing-md: 12px;
 $spacing-lg: 16px;
 
-// Dimensions
+// Dimensões do card
 $card-width: 200px;
 $card-border-width: 1px;
-$card-image-height: 140px;
+$card-image-width: 160px;
+$card-image-height: 134px;
+$card-padding: $spacing-md;
+
+// Dimensões do botão
+$button-height: 40px;
+$button-width: 166px;
+$button-radius: 5px;
+
+// Estrelas
 $star-size: 16px;
 $star-gap: 2px;
 
 // Border radius
 $border-radius: 8px;
 
-// Transitions
+// Transições
 $transition-speed: 0.3s;

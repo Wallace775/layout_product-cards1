@@ -1,4 +1,4 @@
-@import 'variables';
+@import './variables';
 
 .stars {
   display: flex;
@@ -13,17 +13,10 @@
     background-position: center;
   }
 
-  // Modifiers for highlighting first N stars using SCSS loop
   @for $i from 1 through 5 {
     &--#{$i} {
-      .stars__star {
-        background-image: url('../images/star.svg');
-      }
-
-      @for $j from 1 through $i {
-        .stars__star:nth-child(#{$j}) {
-          background-image: url('../images/star-active.svg');
-        }
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
       }
     }
   }

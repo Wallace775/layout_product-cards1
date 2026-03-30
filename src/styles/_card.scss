@@ -14,7 +14,8 @@
     height: $card-image-height;
     object-fit: contain;
     display: block;
-    margin: $spacing-image-top auto $spacing-image-bottom auto;
+    margin: $spacing-image-top $spacing-image-sides $spacing-image-bottom
+      $spacing-image-sides;
   }
 
   &__title {
